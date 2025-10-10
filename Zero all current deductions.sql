@@ -1,0 +1,32 @@
+UPDATE james.dbo.eded SET rate=0
+WHERE co IN ('7000','7001','7002','7020')
+	AND dcode IN (
+	'DO',
+	'DPPOF125',
+	'DPPOS&D125',
+	'DPPOS&S125',
+	'DPPOS125',
+	'DPRES&S125',
+	'DPRES125',
+	'HHDHPF125',
+	'HHDHPS&D12',
+	'HHDHPS&S12',
+	'HHDHPS125',
+	'HO',
+	'HPPOF125',
+	'HPPOS&D125',
+	'HPPOS&S125',
+	'HPPOS125',
+	'HSA125F',
+	'HSA125F55',
+	'HSA125S',
+	'HSA125S55',
+	'ML',
+	'MLS',
+	'STDNY',
+	'VF125',
+	'VO',
+	'VS&S125',
+	'VS125',
+	'VSD125')
+

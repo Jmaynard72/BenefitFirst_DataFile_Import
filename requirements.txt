@@ -1,0 +1,4 @@
+paramiko
+sqlalchemy
+pandas
+pyodbc
