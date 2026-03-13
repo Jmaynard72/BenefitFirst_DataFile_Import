@@ -7,7 +7,7 @@ class ConnectionHandler:
         self.host = host 
         self.database = database 
 
-        self.engine = create_engine(f"mssql+pyodbc://@{self.host}/{self.database}?trusted_connection=yes&driver=ODBC+Driver+18+for+SQL+Server")
+        self.engine = create_engine(f"mssql+pyodbc://@{self.host}/{self.database}?trusted_connection=yes&driver=ODBC+Driver+18+for+SQL+Server&TrustServerCertificate=yes")
     def fetch_data(self, query):
         return pd.read_sql(query,self.engine)
     
