@@ -1,6 +1,6 @@
 
 from utils import get_files_to_process as get
-import utils.sftp as sftp
+#import utils.sftp as sftp
 from utils import log_tracking as log 
 
 import pandas as pd
@@ -12,7 +12,7 @@ import os
 #Config
 SERVER = 'PSI-SQL'
 DATABASE = 'Millennium'
-DRIVER = 'ODBC Driver 17 for SQL Server'
+DRIVER = 'ODBC Driver 18 for SQL Server'
 key_columns = ['co','id','dcode']
 
 #Send email notifications to
@@ -54,7 +54,7 @@ def format_ssn(ssn):
 
 def process_changes(file,company):
     # Connect to database
-    connection_string = f"mssql+pyodbc://@{SERVER}/{DATABASE}?trusted_connection=yes&driver={DRIVER}"
+    connection_string = f"mssql+pyodbc://@{SERVER}/{DATABASE}?trusted_connection=yes&driver={DRIVER}&TrustServerCertificate=yes"
     engine = create_engine(connection_string, fast_executemany=True)
 
     conn = engine.connect()
