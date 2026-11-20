@@ -2,3 +2,4 @@ paramiko
 sqlalchemy
 pandas
 pyodbc
+numpy
